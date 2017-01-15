@@ -1,15 +1,20 @@
 {
   "name": "many-cards",
   "version": "0.0.1",
-  "description": "An implementation of fullpage.js in react based on many-cards",
+  "description": "many-cards",
   "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "babel src --out-dir dist",
     "start": "node example/server.js",
     "dev": "babel src --out-dir dist --watch",
     "clean": "rm -rf dist && rm example/bundle.js",
-    "build": "npm run release && ./node_modules/webpack/bin/webpack.js --progress --colors --config example/webpack.config.js"
+    "build": "npm run release && ./node_modules/webpack/bin/webpack.js --progress --colors --config example/webpack.config.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +22,9 @@
   },
   "keywords": [
     "react",
-    "fullpage.js"
+    "card",
+    "echarts",
+    "widget"
   ],
   "author": "liekkas",
   "license": "MIT",
