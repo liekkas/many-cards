@@ -3,4 +3,6 @@
  */
 export {default as Card} from './Card'
 
-export {default as ACard} from './widgets/ACard'
+export {default as Heart2} from './hearts/Heart2'
+
+export {default as Spade2} from './spades/Spade2'
