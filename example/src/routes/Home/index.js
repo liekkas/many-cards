@@ -7,7 +7,7 @@ function Home({home}) {
   return (
     <div>
       <Row gutter={24}>
-        whats're you cry big right
+        Waiting For Documented...
       </Row>
     </div>
   );
