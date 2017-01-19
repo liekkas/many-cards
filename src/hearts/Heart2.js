@@ -11,6 +11,12 @@ const Root = styled(Card)`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+  }
 `
 
 const Icon = styled.span`
@@ -32,7 +38,7 @@ const Number = styled.p`
 `
 
 const Heart2 = (props) => {
-  const {cIndex, title, value, icon, unit, decimal, inverted, color, bgColor, borderColor,
+  const {cIndex, title, value, icon, img, unit, decimal, inverted, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
     borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
     borderRadius, borderWidth, borderStyle} = props
@@ -62,7 +68,9 @@ const Heart2 = (props) => {
   }
   return (
     <Root {..._cardProps}>
-      <Icon className={icon} />
+      {icon ? <Icon className={icon} /> : null}
+      {img ? <img src={img} /> : null}
+
       <Header>
         <Title>{title}</Title>
         <Number>
@@ -84,29 +92,31 @@ const Heart2 = (props) => {
 
 Heart2.propsType = {
   title: PropTypes.string,
-  total: PropTypes.number,
-  cIndex: React.PropTypes.number,
+  value: PropTypes.number,
+  icon: PropTypes.string,
+  img: PropTypes.string,
+  cIndex: PropTypes.number,
 
-  color: React.PropTypes.string,
-  bgColor: React.PropTypes.string,
-  borderColor: React.PropTypes.string,
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
+  borderColor: PropTypes.string,
 
-  inverted: React.PropTypes.bool,
+  inverted: PropTypes.bool,
 
-  showBorder: React.PropTypes.bool,
-  showBorderTop: React.PropTypes.bool,
-  showBorderBottom: React.PropTypes.bool,
-  showBorderLeft: React.PropTypes.bool,
-  showBorderRight: React.PropTypes.bool,
+  showBorder: PropTypes.bool,
+  showBorderTop: PropTypes.bool,
+  showBorderBottom: PropTypes.bool,
+  showBorderLeft: PropTypes.bool,
+  showBorderRight: PropTypes.bool,
 
-  borderTopColor: React.PropTypes.string,
-  borderBottomColor: React.PropTypes.string,
-  borderLeftColor: React.PropTypes.string,
-  borderRightColor: React.PropTypes.string,
+  borderTopColor: PropTypes.string,
+  borderBottomColor: PropTypes.string,
+  borderLeftColor: PropTypes.string,
+  borderRightColor: PropTypes.string,
 }
 
 Heart2.defaultProps = {
-  total: 2017,
+  value: 2017,
 }
 
 

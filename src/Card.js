@@ -5,8 +5,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CC from './CardConfig'
 
-const option = CC.getOption()
-const {colors} = option
+let option
 
 const borderFunc = (props) =>
   props.borderColor ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${props.borderColor}`
@@ -14,18 +13,18 @@ const borderFunc = (props) =>
       : 'none'
 
 const borderTypeFunc = (props, color, isShow) =>
-  props[color] ? `4px solid ${props[color]}`
-    : props[isShow] ? `4px solid ${colors[props.cIndex%colors.length]}`
+  props[color] ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${props[color]}`
+    : props[isShow] ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${option.colors[props.cIndex%option.colors.length]}`
       : borderFunc(props)
 
 const bgColorFunc = (props) =>
   props.bgColor ? props.bgColor
-    : props.inverted ? (props.cIndex > -1 ? colors[props.cIndex%colors.length] : option.color)
+    : props.inverted ? (props.cIndex > -1 ? option.colors[props.cIndex%option.colors.length] : option.color)
       : option.bgColor
 
 const colorFunc = (props) =>
   props.color ? props.color
-    : !props.inverted ? (props.cIndex > -1 ? colors[props.cIndex%colors.length] : option.color)
+    : !props.inverted ? (props.cIndex > -1 ? option.colors[props.cIndex%option.colors.length] : option.color)
       : option.bgColor
 
 const Root = styled.div`
@@ -58,6 +57,7 @@ const Header = styled.div`
 `
 
 const Card = (props) => {
+  option = CC.getOption(props.$type)
   return (
     <Root {...props}>
       {
@@ -105,6 +105,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
+  $type: 'Card',
   showBorder: true,
   inverted: false,
   cIndex: -1,
