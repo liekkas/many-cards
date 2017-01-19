@@ -8,34 +8,34 @@ const menus = [
   {
     key: 'home',
     name: 'Home',
-    icon: home,
+    img: home,
   },
   {
     key: 'heart',
     name: 'Heart Cards',
-    icon: heart,
+    img: heart,
     children: [
       {
         key: 'heart2',
         name: 'Heart 2',
-        icon: heart,
+        img: heart,
       }
     ]
   },
   {
     key: 'spade',
     name: 'Spade Cards',
-    icon: spade,
+    img: spade,
   },
   {
     key: 'diamond',
     name: 'Diamond Cards',
-    icon: diamond,
+    img: diamond,
   },
   {
     key: 'club',
     name: 'Club Cards',
-    icon: club,
+    img: club,
   }
 ]
 

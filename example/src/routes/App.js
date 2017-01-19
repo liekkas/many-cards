@@ -18,7 +18,7 @@ const getMenus = function (menuArray, collapsed, parentPath) {
   return menuArray.map(item => {
     if (item.children) {
       return (
-        <Menu.SubMenu key={item.key} title={<span>{item.icon ? <Icon src={item.icon} /> : ''}{item.name}</span>}>
+        <Menu.SubMenu key={item.key} title={<span>{item.img ? <Icon src={item.img} /> : ''}{item.name}</span>}>
           {getMenus(item.children, collapsed, parentPath + item.key + '/')}
         </Menu.SubMenu>
       )
@@ -26,7 +26,7 @@ const getMenus = function (menuArray, collapsed, parentPath) {
       return (
         <Menu.Item key={item.key}>
           <Link to={parentPath + item.key}>
-            {item.icon ? <Icon src={item.icon} /> : ''}
+            {item.img ? <Icon src={item.img} /> : ''}
             {collapsed ? '' : item.name}
           </Link>
         </Menu.Item>

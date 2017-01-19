@@ -4,10 +4,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'dva'
-import {Spade2} from '../../../../dist'
+import {Card} from '../../../../dist'
 import {Row, Col} from 'antd'
 
-const Root = styled(Spade2)`
+const Root = styled(Card)`
 
 `
 
@@ -17,7 +17,7 @@ const Spade2Demo = ({spade2}) => {
       {
         spade2.data.map((item, index) =>
           <Col key={index} md={8} lg={6} sm={12}>
-            <Spade2 {...item}></Spade2>
+            <Card {...item}></Card>
           </Col>
         )
       }

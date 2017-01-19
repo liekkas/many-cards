@@ -11,6 +11,7 @@ CardConfig.setOption({
 const app = dva();
 
 app.model(require("./models/app"));
+app.model(require("./models/home"));
 app.model(require("./models/hearts/heart2"));
 app.model(require("./models/spades/spade2"));
 

@@ -4,8 +4,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'dva'
-import {Heart2, Card} from '../../../../dist'
+import {Heart2, PokerCard} from '../../../../dist'
 import {Row, Col, Switch} from 'antd'
+import heart from '../../assets/heart.png'
+import API from '../../components/API'
 
 const Controller = styled.div`
   display: flex;
@@ -39,6 +41,10 @@ class Heart2Demo extends React.Component {
     const boolProps = ['showBorder','inverted','showBorderTop','showBorderBottom','showBorderLeft','showBorderRight']
     return (
       <div>
+        <PokerCard title="2" icon={heart}>
+          <Heart2 icon="fa fa-heart"/>
+          <Heart2 icon="fa fa-heart" inverted/>
+        </PokerCard>
         <Controller>
           {
             boolProps.map(bp =>
@@ -65,6 +71,7 @@ class Heart2Demo extends React.Component {
             )
           }
         </Row>
+        <API></API>
       </div>
     )
   }
