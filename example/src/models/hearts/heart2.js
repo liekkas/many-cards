@@ -26,10 +26,45 @@ const data = [
   }
 ]
 
+const api = [
+  {
+    prop: 'showBorder',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'true'
+  },{
+    prop: 'showBorderTop',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'false'
+  },{
+    prop: 'showBorderBottom',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'false'
+  },{
+    prop: 'showBorderLeft',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'false'
+  },{
+    prop: 'showBorderRight',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'false'
+  },{
+    prop: 'inverted',
+    desc: '',
+    type: 'bool',
+    defaultValue: 'false'
+  },
+]
+
 export default {
   namespace: 'heart2',
   state: {
     data,
+    api,
   },
   reducers: {},
   effects: {},

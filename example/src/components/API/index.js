@@ -1,15 +1,9 @@
 /**
  * Created by liekkas on 2017/1/17.
  */
-
 import React from 'react'
-import styled from 'styled-components'
 import {Table} from 'antd'
 import {Card} from '../../../../dist'
-
-const Root = styled.div`
-
-`
 
 const columns = [
   {
@@ -37,7 +31,7 @@ const columns = [
 const API = ({data}) => {
   return (
     <Card headerText={'API'} headerIcon={'fa fa-book'}>
-       <Table columns={columns} dataSource={data} pagination={false} bordered/>
+       <Table rowKey={row => row.prop} columns={columns} dataSource={data} pagination={false} bordered/>
     </Card>
   )
 }
