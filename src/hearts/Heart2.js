@@ -34,24 +34,34 @@ const Number = styled.p`
 const Heart2 = (props) => {
   const {cIndex, title, value, icon, unit, decimal, inverted, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
-    borderTopColor, borderBottomColor, borderLeftColor, borderRightColor} = props
+    borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
+    borderRadius, borderWidth, borderStyle} = props
+
+  const _cardProps = {
+    $type: "Heart2",
+    headerText: '',
+    headerIcon: '',
+    headerImg: '',
+    cIndex,
+    color,
+    bgColor,
+    borderColor,
+    inverted,
+    showBorder,
+    showBorderTop,
+    showBorderBottom,
+    showBorderLeft,
+    showBorderRight,
+    borderTopColor,
+    borderBottomColor,
+    borderLeftColor,
+    borderRightColor,
+    borderRadius,
+    borderWidth,
+    borderStyle,
+  }
   return (
-    <Root $type="Heart2"
-          cIndex={cIndex}
-          color={color}
-          bgColor={bgColor}
-          borderColor={borderColor}
-          inverted={inverted}
-          showBorder={showBorder}
-          showBorderTop={showBorderTop}
-          showBorderBottom={showBorderBottom}
-          showBorderLeft={showBorderLeft}
-          showBorderRight={showBorderRight}
-          borderTopColor={borderTopColor}
-          borderBottomColor={borderBottomColor}
-          borderLeftColor={borderLeftColor}
-          borderRightColor={borderRightColor}
-    >
+    <Root {..._cardProps}>
       <Icon className={icon} />
       <Header>
         <Title>{title}</Title>
@@ -97,7 +107,6 @@ Heart2.propsType = {
 
 Heart2.defaultProps = {
   total: 2017,
-  cIndex: 0
 }
 
 

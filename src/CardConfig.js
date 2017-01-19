@@ -8,9 +8,12 @@ const types = ['Heart','Spade','Diamond','Club']
 const series = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
 
 let _option = {
-  color: MDColor.mdWhite,
+  color: MDColor.mdGrey800,
   bgColor: MDColor.mdWhite,
   borderColor: MDColor.mdGrey200,
+  borderWidth: 1,
+  borderRadius: 8,
+  borderStyle: 'solid',
   colors: [MDColor.mdBlue400, MDColor.mdGreen400, MDColor.mdOrange400, MDColor.mdRed400],
   bgColors: [MDColor.mdBlue400, MDColor.mdGreen400, MDColor.mdOrange400, MDColor.mdRed400],
 }
