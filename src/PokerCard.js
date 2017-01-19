@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Card from './Card'
 
 const Marker = styled.div`
+  margin-bottom: 4px;
   p {
     font-size: 1.5rem;
     margin-left: 2px;
@@ -18,6 +19,8 @@ const Marker = styled.div`
 `
 const InvertedMarker = styled(Marker)`
   transform: rotateZ(180deg);
+  margin-top: 4px;
+  margin-bottom: 0;
 `
 
 const PokerCard = ({children, title, icon, img, borderColor}) => {

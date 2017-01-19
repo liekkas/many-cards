@@ -11,19 +11,19 @@ const Root = styled(Card)`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
   img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
   }
 `
 
 const Icon = styled.span`
-  font-size: 3.5rem;
+  font-size: 3rem;
 `
 
 const Header = styled.div`
+  margin: 0 8px;
   text-align: center;
   font-size: 1.2rem;
 `
