@@ -2,31 +2,30 @@
  * Created by liekkas on 2017/1/15.
  */
 import React from 'react'
-import styled, {ThemeProvider} from 'styled-components'
+import styled from 'styled-components'
 import CC from './CardConfig'
 
-const option = CC.getOption()
-const {colors} = option
+let option
 
 const borderFunc = (props) =>
-  props.borderColor ? `1px solid ${props.borderColor}`
-    : props.showBorder ? `1px solid ${option.borderColor}`
+  props.borderColor ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${props.borderColor}`
+    : props.showBorder ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${option.borderColor}`
       : 'none'
 
 const borderTypeFunc = (props, color, isShow) =>
-  props[color] ? `4px solid ${props[color]}`
-    : props[isShow] ? `4px solid ${colors[props.cIndex%colors.length]}`
+  props[color] ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${props[color]}`
+    : props[isShow] ? `${props.borderWidth || option.borderWidth}px ${props.borderStyle || option.borderStyle} ${option.colors[props.cIndex%option.colors.length]}`
       : borderFunc(props)
 
 const bgColorFunc = (props) =>
   props.bgColor ? props.bgColor
-    : props.inverted ? colors[props.cIndex%colors.length]
+    : props.inverted ? (props.cIndex > -1 ? option.colors[props.cIndex%option.colors.length] : option.color)
       : option.bgColor
 
 const colorFunc = (props) =>
   props.color ? props.color
-    : !props.inverted ? colors[props.cIndex%colors.length]
-      : option.color
+    : !props.inverted ? (props.cIndex > -1 ? option.colors[props.cIndex%option.colors.length] : option.color)
+      : option.bgColor
 
 const Root = styled.div`
   border: ${props => borderFunc(props)};
@@ -35,19 +34,42 @@ const Root = styled.div`
   border-left: ${props => borderTypeFunc(props, 'borderLeftColor', 'showBorderLeft')};
   border-right: ${props => borderTypeFunc(props, 'borderRightColor', 'showBorderRight')};
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: ${props => (props.borderRadius || option.borderRadius)+'px'};
   color: ${props => colorFunc(props)};
   background-color: ${props => bgColorFunc(props)};
   margin-bottom: 16px;
+  padding: 12px;
   &:hover {
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
   }
 `
 
+const Header = styled.div`
+  display: flex;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  align-items: center;
+  font-weight: 500;
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+`
+
 const Card = (props) => {
+  option = CC.getOption(props.$type)
   return (
     <Root {...props}>
-        {props.children}
+      {
+        props.headerText || props.headerIcon || props.headerImg
+          ? <Header>
+              {props.headerIcon ? <span className={props.headerIcon}/> : null}
+              {props.headerImg ? <img src={props.headerImg} /> : null}
+              <p>&nbsp;{props.headerText}</p>
+            </Header>
+          : null
+      }
+      {props.children}
     </Root>
   )
 }
@@ -62,6 +84,10 @@ Card.propTypes = {
 
   inverted: React.PropTypes.bool,
 
+  borderWidth: React.PropTypes.number,
+  borderRadius: React.PropTypes.number,
+  borderStyle: React.PropTypes.string,
+
   showBorder: React.PropTypes.bool,
   showBorderTop: React.PropTypes.bool,
   showBorderBottom: React.PropTypes.bool,
@@ -72,12 +98,20 @@ Card.propTypes = {
   borderBottomColor: React.PropTypes.string,
   borderLeftColor: React.PropTypes.string,
   borderRightColor: React.PropTypes.string,
+
+  headerText: React.PropTypes.string,
+  headerIcon: React.PropTypes.string,
+  headerImg: React.PropTypes.string,
 }
 
 Card.defaultProps = {
+  $type: 'Card',
   showBorder: true,
   inverted: false,
-  cIndex: 0,
+  cIndex: -1,
+  headerText: '',
+  headerIcon: '',
+  headerImg: ''
 }
 
 export default Card

@@ -8,11 +8,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "babel src --out-dir dist",
-    "start": "node example/server.js",
+    "release": "babel src  --plugins transform-object-rest-spread --out-dir dist",
     "dev": "babel src --plugins transform-object-rest-spread --out-dir dist --watch",
-    "clean": "rm -rf dist && rm example/bundle.js",
-    "build": "npm run release && ./node_modules/webpack/bin/webpack.js --progress --colors --config example/webpack.config.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run release",
     "prepublish": "npm run build"
   },
   "repository": {

@@ -1,7 +1,7 @@
 /**
  * Created by liekkas on 2017/1/16.
  */
-export default {
+const colors = {
   mdRed50: '#ffebee',
   mdRed100: '#ffcdd2',
   mdRed200: '#ef9a9a',
@@ -279,3 +279,5 @@ export default {
 
   mdBlack: '#000000',
 }
+
+module.exports = colors
