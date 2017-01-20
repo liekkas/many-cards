@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import {Table} from 'antd'
-import {Card} from '../../../../dist'
+import {Card} from '../../../../index'
 
 const columns = [
   {

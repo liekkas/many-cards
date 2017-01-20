@@ -3,7 +3,7 @@
  * NOTE: the next will override the previous settings
  */
 
-import {CardConfig} from '../../dist'
+import {CardConfig} from '../../index'
 import colors from '../../dist/colors'
 
 //for all cards

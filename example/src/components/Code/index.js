@@ -2,7 +2,7 @@
  * Created by liekkas on 2017/1/19.
  */
 import React from 'react'
-import {Card} from '../../../../dist'
+import {Card} from '../../../../index'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { github } from 'react-syntax-highlighter/dist/styles'
 import {Button} from 'antd'

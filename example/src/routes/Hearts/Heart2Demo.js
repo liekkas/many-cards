@@ -4,7 +4,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'dva'
-import {Heart2, PokerCard, Card} from '../../../../dist'
+import {Heart2, PokerCard, Card} from '../../../../index'
 import {Row, Col, Switch} from 'antd'
 import heart from '../../assets/heart.png'
 import API from '../../components/API'

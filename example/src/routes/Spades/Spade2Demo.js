@@ -4,7 +4,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'dva'
-import {Card} from '../../../../dist'
+import {Card} from '../../../../index'
 import {Row, Col} from 'antd'
 
 const Root = styled(Card)`

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {Row, Col} from 'antd'
-import {PokerCard} from '../../../../dist'
+import {PokerCard} from '../../../../index'
 import styled from 'styled-components'
 
 const Info = styled.div`
