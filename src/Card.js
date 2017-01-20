@@ -75,7 +75,6 @@ const Card = (props) => {
 }
 
 Card.propTypes = {
-  $type: React.PropTypes.string,
   cIndex: React.PropTypes.number,
 
   color: React.PropTypes.string,
