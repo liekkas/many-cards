@@ -22,6 +22,13 @@ ReactDOM.render(<App/>, root);
 
 click [demo](https://liekkas.github.com/many-cards/)
 
+## Dev
+>* npm i
+>* npm run dev
+>* cd example (open another shell)
+>* npm i
+>* npm start
+
 ## Snapshot
 
 ![image](https://raw.githubusercontent.com/liekkas/many-cards/master/snapshot.png)
