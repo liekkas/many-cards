@@ -1,9 +1,10 @@
 {
   "name": "many-cards",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "many-cards",
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
+    "index.js",
     "dist"
   ],
   "scripts": {

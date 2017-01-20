@@ -7,11 +7,23 @@
 npm install --save many-cards
 ```
 
-### Doc
-TO BE DOCUMENTED
-## Heart
->* Heart2
+## Use
+```
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Heart2} from 'many-cards'
 
-## Spade
-## Diamond
-## Club
+const App = () => <Heart2 />
+
+ReactDOM.render(<App/>, root);
+```
+
+## Live Demo
+
+click [demo](https://liekkas.github.com/many-cards/)
+
+## Snapshot
+
+![image](https://raw.githubusercontent.com/liekkas/many-cards/master/snapshot.png)
+
+
