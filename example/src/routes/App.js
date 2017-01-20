@@ -4,7 +4,6 @@ import { Layout, Menu } from 'antd';
 const { Sider, Footer, Content } = Layout;
 import { Link } from 'dva/router'
 import styled from 'styled-components'
-import logo from '../assets/logo.png'
 
 const Icon = styled.img`
   width: 20px;
@@ -118,7 +117,7 @@ class App extends React.Component {
           width={200}
           style={{minWidth: '50px'}}>
           <LogoC>
-            <img src={logo} />
+            <img src='https://raw.githubusercontent.com/liekkas/many-cards/gh-pages/static/logo.png' />
             <a target="_blank" href="//github.com/liekkas/many-cards">
               <span className="fa fa-github" />
             </a>
