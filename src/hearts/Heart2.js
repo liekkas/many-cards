@@ -38,7 +38,7 @@ const Number = styled.p`
 `
 
 const Heart2 = (props) => {
-  const {cIndex, title, value, icon, img, unit, decimal, inverted, color, bgColor, borderColor,
+  const {cIndex, title, value, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
     borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
     borderRadius, borderWidth, borderStyle} = props
@@ -52,6 +52,7 @@ const Heart2 = (props) => {
     color,
     bgColor,
     borderColor,
+    hoverShowShadow,
     inverted,
     showBorder,
     showBorderTop,
@@ -102,6 +103,7 @@ Heart2.propsType = {
   borderColor: PropTypes.string,
 
   inverted: PropTypes.bool,
+  hoverShowShadow: PropTypes.bool,
 
   showBorder: PropTypes.bool,
   showBorderTop: PropTypes.bool,

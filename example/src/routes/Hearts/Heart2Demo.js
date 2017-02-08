@@ -54,8 +54,8 @@ class Heart2Demo extends React.Component {
           <Row gutter={16}>
             <Col md={8} lg={7} sm={12}>
               <PokerCard title='2' img={heart}>
-                <Heart2 title='Heart2' value={2017} icon='fa fa-heart' />
-                <Heart2 title='Inverted' value={2017} img='https://avatars1.githubusercontent.com/u/778747?v=3&s=460' inverted />
+                <Heart2 title='Heart2' value={2017} icon='fa fa-heart' hoverShowShadow={false}/>
+                <Heart2 title='Inverted' value={2017} hoverShowShadow={false} img='https://avatars1.githubusercontent.com/u/778747?v=3&s=460' inverted />
               </PokerCard>
             </Col>
             <Col md={16} lg={17} sm={24}>
@@ -77,8 +77,8 @@ const Heart2s = ({data}) => (<Row gutter={16}>
 </Row>)
 ...
 <PokerCard title='2' img={heart}>
-   <Heart2 title='Heart2' value={2017} icon='fa fa-heart' />
-   <Heart2 title='Inverted' value={2017}
+   <Heart2 title='Heart2' value={2017} icon='fa fa-heart' hoverShowShadow={false}/>
+   <Heart2 title='Inverted' value={2017} hoverShowShadow={false}
            img='https://avatars1.githubusercontent.com/u/778747?v=3&s=460'
            inverted />
 </PokerCard>

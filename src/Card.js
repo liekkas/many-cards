@@ -40,7 +40,7 @@ const Root = styled.div`
   margin-bottom: 16px;
   padding: 12px;
   &:hover {
-    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    box-shadow: ${props => props.hoverShowShadow ? '0 1px 3px rgba(0,0,0,0.2)' : '0'};
   }
 `
 
@@ -81,6 +81,7 @@ Card.propTypes = {
   bgColor: React.PropTypes.string,
   borderColor: React.PropTypes.string,
 
+  hoverShowShadow: React.PropTypes.bool,
   inverted: React.PropTypes.bool,
 
   borderWidth: React.PropTypes.number,
@@ -107,6 +108,7 @@ Card.defaultProps = {
   $type: 'Card',
   showBorder: true,
   inverted: false,
+  hoverShowShadow: true,
   cIndex: -1,
   headerText: '',
   headerIcon: '',
