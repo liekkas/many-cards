@@ -36,6 +36,13 @@ const menus = [
     key: 'club',
     name: 'Club Cards',
     img: club,
+    children: [
+      {
+        key: 'club2',
+        name: 'Club 2',
+        img: club,
+      }
+    ]
   }
 ]
 
