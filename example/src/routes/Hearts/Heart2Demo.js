@@ -35,6 +35,7 @@ class Heart2Demo extends React.Component {
     showBorderLeft: false,
     showBorderRight: false,
     inverted: false,
+    hoverShowShadow: true,
   }
 
   handleToggle = (prop) => {
@@ -46,7 +47,7 @@ class Heart2Demo extends React.Component {
   render() {
     const { heart2 } = this.props
     const state = this.state
-    const boolProps = ['showBorder','inverted','showBorderTop','showBorderBottom','showBorderLeft','showBorderRight']
+    const boolProps = ['showBorder','inverted','hoverShowShadow','showBorderTop','showBorderBottom','showBorderLeft','showBorderRight']
     return (
       <div>
         <Card headerText={'Basic'} headerIcon={'fa fa-id-badge'}>
@@ -109,6 +110,7 @@ const Heart2s = ({data}) => (<Row gutter={16}>
                           showBorderBottom={state.showBorderBottom}
                           showBorderLeft={state.showBorderLeft}
                           showBorderRight={state.showBorderRight}
+                          hoverShowShadow={state.hoverShowShadow}
                           inverted={state.inverted}
                   />
                 </Col>
