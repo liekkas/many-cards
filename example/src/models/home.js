@@ -27,6 +27,14 @@ const data = [
     author: 'liekkas',
     modifyTime: '2017-02-08',
     borderColor: colors.mdGrey800
+  },,{
+    name: 'Club6',
+    index: '6',
+    img: club,
+    path: 'club/club6',
+    author: 'liekkas',
+    modifyTime: '2017-02-13',
+    borderColor: colors.mdGrey800
   },
 ]
 

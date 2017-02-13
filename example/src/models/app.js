@@ -45,7 +45,11 @@ const menus = [
         key: 'club2',
         name: 'Club 2',
         img: club,
-      }
+      },{
+        key: 'club6',
+        name: 'Club 6',
+        img: club,
+      },
     ]
   }
 ]
