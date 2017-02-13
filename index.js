@@ -6,11 +6,8 @@ module.exports = {
   PokerCard: require('./dist/PokerCard').default,
   CardConfig: require('./dist/CardConfig').default,
   Heart2: require('./dist/hearts/Heart2').default,
-}
-//
-// export {default as Card} from './src/Card'
-// export {default as PokerCard} from './src/PokerCard'
-// export {default as CardConfig} from './src/CardConfig'
-//
-// export {default as Heart2} from './src/hearts/Heart2'
+  Heart3: require('./dist/hearts/Heart3').default,
 
+  Club2: require('./dist/clubs/Club2').default,
+  Club6: require('./dist/clubs/Club6').default,
+}

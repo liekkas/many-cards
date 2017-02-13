@@ -19,6 +19,10 @@ const menus = [
         key: 'heart2',
         name: 'Heart 2',
         img: heart,
+      },{
+        key: 'heart3',
+        name: 'Heart 3',
+        img: heart,
       }
     ]
   },
