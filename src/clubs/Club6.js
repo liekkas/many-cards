@@ -71,10 +71,10 @@ function genOption(value, title, unit, color=option.colors[0] || 'lightBlue') {
   }
 }
 
-const Club6 = ({value, title, unit, color}) => {
+const Club6 = ({value, title, unit, height, color}) => {
   return (
     <Card>
-      <ECharts option={genOption(value, title, unit, color)} style={{width: '100%', height: '100%', minHeight: '200px'}}/>
+      <ECharts option={genOption(value, title, unit, color)} style={{width: '100%', height}}/>
     </Card>
   )
 }
@@ -84,11 +84,13 @@ Club6.propsType = {
   color: PropTypes.string,
   title: PropTypes.string,
   unit: PropTypes.string,
+  height: PropTypes.string,
 }
 
 Club6.defaultProps = {
   title: '',
-  unit: ''
+  unit: '',
+  height: '150px'
 }
 
 export default Club6

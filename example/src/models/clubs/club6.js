@@ -17,6 +17,11 @@ const api = [
     type: 'string',
     defaultValue: ''
   },{
+    prop: 'height',
+    desc: '高度',
+    type: 'string',
+    defaultValue: '150px'
+  },{
     prop: 'color',
     desc: '主颜色',
     type: 'string',
