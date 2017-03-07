@@ -31,5 +31,6 @@ node_modules
 .DS_Store
 build
 dist
+example/dist
 example/bundle.js
 .idea
