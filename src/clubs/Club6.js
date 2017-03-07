@@ -14,10 +14,7 @@ function genOption(value, title, unit, color=option.colors[0] || 'lightBlue') {
   return {
     title: {
       text: title,
-      left: '6',
-      top: 6,
       textStyle: {
-//         color: color.PRIMARY_TEXT_COLOR,
         insideColor: '#fff',
         fontSize: 16,
         fontWeight: 'bold',

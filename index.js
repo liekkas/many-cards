@@ -10,4 +10,5 @@ module.exports = {
 
   Club2: require('./dist/clubs/Club2').default,
   Club6: require('./dist/clubs/Club6').default,
+  Club7: require('./dist/clubs/Club7').default,
 }

@@ -55,7 +55,7 @@ class Heart2Demo extends React.Component {
           <Row gutter={16}>
             <Col md={8} lg={7} sm={12}>
               <PokerCard title='2' img={heart}>
-                <Heart2 title='Heart2' value={2017} icon='fa fa-heart' hoverShowShadow={false}/>
+                <Heart2 title='Heart2' value={2017} icon='fa fa-heart' hoverShowShadow={false} onClick={(v) => console.log('>>> Heart2 clicked',v)}/>
                 <Heart2 title='Inverted' value={2017} hoverShowShadow={false} img='https://avatars1.githubusercontent.com/u/778747?v=3&s=460' inverted />
               </PokerCard>
             </Col>

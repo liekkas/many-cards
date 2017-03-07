@@ -13,6 +13,7 @@ app.model(require("./models/hearts/heart3"));
 app.model(require("./models/spades/spade2"));
 app.model(require("./models/clubs/club2"));
 app.model(require("./models/clubs/club6"));
+app.model(require("./models/clubs/club7"));
 
 // 2. Plugins
 // app.use({});

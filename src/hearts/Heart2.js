@@ -6,8 +6,7 @@ import styled from 'styled-components'
 import CountUp from 'react-countup'
 import Card from '../Card'
 
-const Root = styled(Card)`
-  padding: 12px;
+const Root = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -41,7 +40,7 @@ const Heart2 = (props) => {
   const {cIndex, title, value, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
     borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
-    borderRadius, borderWidth, borderStyle} = props
+    borderRadius, borderWidth, borderStyle, onClick} = props
 
   const _cardProps = {
     $type: "Heart2",
@@ -66,28 +65,31 @@ const Heart2 = (props) => {
     borderRadius,
     borderWidth,
     borderStyle,
+    onClick
   }
   return (
-    <Root {..._cardProps}>
-      {icon ? <Icon className={icon} /> : null}
-      {img ? <img src={img} /> : null}
+    <Card {..._cardProps}>
+      <Root>
+        {icon ? <Icon className={icon} /> : null}
+        {img ? <img src={img} /> : null}
 
-      <Header>
-        <Title>{title}</Title>
-        <Number>
-          <CountUp
-            start={0}
-            end={value}
-            duration={2}
-            useEasing
-            decimals={decimal}
-            useGrouping
-            separator=','
-            suffix={unit}
-          />
-        </Number>
-      </Header>
-    </Root>
+        <Header>
+          <Title>{title}</Title>
+          <Number>
+            <CountUp
+              start={0}
+              end={value}
+              duration={2}
+              useEasing
+              decimals={decimal}
+              useGrouping
+              separator=','
+              suffix={unit}
+            />
+          </Number>
+        </Header>
+      </Root>
+    </Card>
   )
 }
 

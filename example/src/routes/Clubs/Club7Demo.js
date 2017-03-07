@@ -5,13 +5,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'dva'
-import {Club6, PokerCard, Card} from '../../../../index'
+import {Club7, PokerCard, Card} from '../../../../index'
 import {Row, Col, Switch} from 'antd'
 import club from '../../assets/club.png'
 import API from '../../components/API'
 import Code from '../../components/Code'
 
-class Club6Demo extends React.Component {
+class Club7Demo extends React.Component {
   state = {
     showBorder: true,
     showBorderTop: false,
@@ -29,36 +29,36 @@ class Club6Demo extends React.Component {
 
 
   render() {
-    const { club6 } = this.props
+    const { club7 } = this.props
     const state = this.state
     return (
       <div>
         <Card headerText={'Basic'} headerIcon={'fa fa-id-badge'}>
           <Row gutter={16}>
             <Col md={8} lg={7} sm={12}>
-              <PokerCard title='6' img={club}>
-                <Club6 value={club6.data} title='title' unit="%" color='orange'/>
+              <PokerCard title='7' img={club}>
+                <Club7 value={club7.data} title='title' height="200" unit="%" color='orange'/>
               </PokerCard>
             </Col>
             <Col md={16} lg={17} sm={24}>
               <div>
                 <Code title='Code'
-                      detailUrl='https://github.com/liekkas/many-cards/blob/master/example/src/routes/Clubs/Club6Demo.js'
+                      detailUrl='https://github.com/liekkas/many-cards/blob/master/example/src/routes/Clubs/Club7Demo.js'
                       codeStr={
-                        `const data=0.56
+                        `const data=57
 ...
-<Club6 value={data} title='title' unit="%" color='orange'/>
+<Club7 value={data} title='title' unit="%" color='orange'/>
 `} />
               </div>
             </Col>
           </Row>
         </Card>
 
-        <API data={club6.api} />
+        <API data={club7.api} />
       </div>
     )
   }
 }
 
-export default connect(({club6}) => ({club6}))(Club6Demo);
+export default connect(({club7}) => ({club7}))(Club7Demo);
 

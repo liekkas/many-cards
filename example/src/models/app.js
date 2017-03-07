@@ -49,6 +49,10 @@ const menus = [
         key: 'club6',
         name: 'Club 6',
         img: club,
+      },{
+        key: 'club7',
+        name: 'Club 7',
+        img: club,
       },
     ]
   }

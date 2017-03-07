@@ -39,6 +39,7 @@ const Root = styled.div`
   background-color: ${props => bgColorFunc(props)};
   margin-bottom: 16px;
   padding: 12px;
+  cursor: ${props => props.onClick ? 'pointer' : 'default'};
   &:hover {
     box-shadow: ${props => props.hoverShowShadow ? '0 1px 3px rgba(0,0,0,0.2)' : '0'};
   }
@@ -102,6 +103,8 @@ Card.propTypes = {
   headerText: React.PropTypes.string,
   headerIcon: React.PropTypes.string,
   headerImg: React.PropTypes.string,
+
+  onClick: React.PropTypes.func,
 }
 
 Card.defaultProps = {

@@ -33,4 +33,3 @@ click [demo](https://liekkas.github.com/many-cards/)
 
 ![image](https://raw.githubusercontent.com/liekkas/many-cards/master/snapshot.png)
 
-
