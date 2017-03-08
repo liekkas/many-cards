@@ -160,7 +160,7 @@ const Heart3 = (props) => {
   )
 }
 
-Heart3.propsType = {
+Heart3.propTypes = {
   title: PropTypes.string,
   value: PropTypes.number,
   icon: PropTypes.string,

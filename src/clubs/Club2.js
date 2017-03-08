@@ -50,7 +50,7 @@ const Club2 = (props) => {
   )
 }
 
-Club2.propsType = {
+Club2.propTypes = {
   data: PropTypes.array,
   labelField: PropTypes.string,
   title: PropTypes.string,

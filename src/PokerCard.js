@@ -49,7 +49,7 @@ const PokerCard = ({children, title, icon, img, borderColor}) => {
   )
 }
 
-PokerCard.propsType = {
+PokerCard.propTypes = {
   title: React.PropTypes.string,
   icon: React.PropTypes.string,
   img: React.PropTypes.string,

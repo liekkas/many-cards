@@ -101,7 +101,7 @@ const Club7 = ({value, title, unit, height, color}) => {
   )
 }
 
-Club7.propsType = {
+Club7.propTypes = {
   value: PropTypes.number,
   color: PropTypes.string,
   title: PropTypes.string,
