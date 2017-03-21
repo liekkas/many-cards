@@ -58,6 +58,11 @@ const api = [
     type: 'number',
     defaultValue: '2017'
   },{
+    prop: 'startValue',
+    desc: '',
+    type: 'number',
+    defaultValue: '0'
+  },{
     prop: 'decimal',
     desc: '小数点位数',
     type: 'number',

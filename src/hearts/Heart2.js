@@ -37,7 +37,7 @@ const Number = styled.p`
 `
 
 const Heart2 = (props) => {
-  const {cIndex, title, value, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
+  const {cIndex, title, value, startValue, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
     borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
     borderRadius, borderWidth, borderStyle, onClick} = props
@@ -77,7 +77,7 @@ const Heart2 = (props) => {
           <Title>{title}</Title>
           <Number>
             <CountUp
-              start={0}
+              start={startValue}
               end={value}
               duration={2}
               useEasing
@@ -96,6 +96,7 @@ const Heart2 = (props) => {
 Heart2.propTypes = {
   title: PropTypes.string,
   value: PropTypes.number,
+  startValue: PropTypes.number,
   icon: PropTypes.string,
   img: PropTypes.string,
   cIndex: PropTypes.number,
@@ -121,6 +122,7 @@ Heart2.propTypes = {
 
 Heart2.defaultProps = {
   value: 2017,
+  startValue: 0,
 }
 
 

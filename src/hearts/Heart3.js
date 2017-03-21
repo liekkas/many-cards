@@ -102,7 +102,7 @@ const detailOption = (v, color) => {
 }
 
 const Heart3 = (props) => {
-  const {cIndex, title, value, detail, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
+  const {cIndex, title, value, startValue, detail, icon, img, unit, decimal, inverted, hoverShowShadow, color, bgColor, borderColor,
     showBorder,showBorderTop,showBorderBottom,showBorderLeft,showBorderRight,
     borderTopColor, borderBottomColor, borderLeftColor, borderRightColor,
     borderRadius, borderWidth, borderStyle} = props
@@ -143,7 +143,7 @@ const Heart3 = (props) => {
           <Title>{title}</Title>
           <Number>
             <CountUp
-              start={0}
+              start={startValue}
               end={value}
               duration={2}
               useEasing
@@ -163,6 +163,8 @@ const Heart3 = (props) => {
 Heart3.propTypes = {
   title: PropTypes.string,
   value: PropTypes.number,
+  startValue: PropTypes.number,
+
   icon: PropTypes.string,
   img: PropTypes.string,
   cIndex: PropTypes.number,
@@ -189,6 +191,7 @@ Heart3.propTypes = {
 
 Heart3.defaultProps = {
   value: 2017,
+  startValue: 0,
 }
 
 
